@@ -1,0 +1,56 @@
+# mcp-csharp-labs
+
+用 C# 建立 MCP (Model Context Protocol) server 的課程練習與筆記。單一 repo + 單一 solution，每個課程模組對應一個獨立練習專案。
+
+## 環境需求
+
+- .NET SDK 9.0.x（見 [`global.json`](global.json)）
+- （選配）[MCP Inspector](https://github.com/modelcontextprotocol/inspector)：`npx @modelcontextprotocol/inspector` — 手動測試 MCP server
+
+## 練習索引
+
+| 章節 | 專案 | Transport | 主題 |
+| --- | --- | --- | --- |
+| Ch01 | [`Ch01.GettingStarted.Stdio`](src/Ch01.GettingStarted.Stdio) | stdio | 最小 MCP server + Echo tool |
+
+> 之後每完成一個模組，新增一列並附上該練習的 README 連結。
+
+## 建置與執行
+
+```powershell
+# 建置整個 solution
+dotnet build
+
+# 執行 Ch01 stdio server（啟動後等待 stdin 為正常）
+dotnet run --project src/Ch01.GettingStarted.Stdio
+
+# 用 MCP Inspector 測試
+npx @modelcontextprotocol/inspector dotnet run --project src/Ch01.GettingStarted.Stdio
+```
+
+## 專案慣例
+
+- **命名**：`ChNN.主題`，對照課程章節，讓 Solution Explorer 依課程順序排列。
+  同一模組若有多個 transport／版本，用後綴細分（如 `Ch01.GettingStarted.Stdio`、`Ch01.GettingStarted.Http`）。
+- **共用設定**：TFM / Nullable / ImplicitUsings 統一在 [`Directory.Build.props`](Directory.Build.props)，各專案自動繼承。
+- **套件版本**：集中式管理（CPM），版本寫在 [`Directory.Packages.props`](Directory.Packages.props)，csproj 的 `PackageReference` 不帶版本。
+- 每個練習專案內都有自己的 `README.md`，記錄目標、做法、測試方式與踩雷筆記。
+
+## 新增一個練習
+
+```powershell
+# stdio server（console 專案）
+dotnet new console -o src/ChNN.主題
+dotnet sln add src/ChNN.主題
+dotnet add src/ChNN.主題 package ModelContextProtocol --prerelease
+dotnet add src/ChNN.主題 package Microsoft.Extensions.Hosting
+
+# HTTP server（ASP.NET Core Web 專案）
+dotnet new web -o src/ChNN.主題
+dotnet sln add src/ChNN.主題
+dotnet add src/ChNN.主題 package ModelContextProtocol.AspNetCore --prerelease
+```
+
+1. 移除 csproj 中已由 `Directory.Build.props` 提供的屬性（`TargetFramework` / `Nullable` / `ImplicitUsings`）。
+2. 在 CPM 下，`dotnet add package` 會自動把版本寫進 `Directory.Packages.props`。
+3. 新增該練習的 `README.md`，並更新上方的練習索引表。

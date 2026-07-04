@@ -1,0 +1,20 @@
+# 自動正規化文字檔換行；提交時存為 LF，簽出時依平台
+* text=auto
+
+# 明確指定常見原始碼為文字檔
+*.cs        text diff=csharp
+*.csproj    text
+*.sln       text eol=crlf
+*.props     text
+*.targets   text
+*.json      text
+*.md        text
+*.ps1       text eol=crlf
+*.sh        text eol=lf
+
+# 二進位檔，避免被換行正規化破壞
+*.png       binary
+*.jpg       binary
+*.ico       binary
+*.dll       binary
+*.snk       binary
