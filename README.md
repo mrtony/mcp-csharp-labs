@@ -7,6 +7,11 @@
 - .NET SDK 9.0.x（見 [`global.json`](global.json)）
 - （選配）[MCP Inspector](https://github.com/modelcontextprotocol/inspector)：`npx @modelcontextprotocol/inspector` — 手動測試 MCP server
 
+## 參考資源
+
+- [Get started with the MCP C# SDK（Microsoft Learn）](https://learn.microsoft.com/en-us/dotnet/ai/get-started-mcp) — 官方入門教學
+- [modelcontextprotocol/csharp-sdk](https://github.com/modelcontextprotocol/csharp-sdk) — C# MCP SDK 原始碼與範例
+
 ## 練習索引
 
 | 章節 | 專案 | Transport | 主題 |
