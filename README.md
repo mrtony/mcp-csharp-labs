@@ -38,6 +38,21 @@ npx @modelcontextprotocol/inspector dotnet run --project src/Ch01.GettingStarted
 
 ## 新增一個練習
 
+用腳本一鍵完成（建專案、加入 solution、加套件、精簡 csproj、產生 README 樣板）：
+
+```powershell
+# stdio server（console 專案）
+./scripts/new-lab.ps1 -Name ChNN.主題
+
+# HTTP server（ASP.NET Core Web 專案）
+./scripts/new-lab.ps1 -Name ChNN.主題 -Transport http
+```
+
+腳本跑完後仍需手動：填 `Program.cs`、更新上方的練習索引表。
+
+<details>
+<summary>手動步驟（不用腳本時）</summary>
+
 ```powershell
 # stdio server（console 專案）
 dotnet new console -o src/ChNN.主題
@@ -54,3 +69,14 @@ dotnet add src/ChNN.主題 package ModelContextProtocol.AspNetCore --prerelease
 1. 移除 csproj 中已由 `Directory.Build.props` 提供的屬性（`TargetFramework` / `Nullable` / `ImplicitUsings`）。
 2. 在 CPM 下，`dotnet add package` 會自動把版本寫進 `Directory.Packages.props`。
 3. 新增該練習的 `README.md`，並更新上方的練習索引表。
+
+</details>
+
+## 目錄說明
+
+| 目錄 | 用途 |
+| --- | --- |
+| `src/` | 各練習專案（`ChNN.主題`） |
+| `tests/` | 測試專案（有目標可測時才建，見 [`tests/README.md`](tests/README.md)） |
+| `docs/notes/` | 跨練習的課程筆記；`docs/diagrams/` 放圖表 |
+| `scripts/` | 自動化腳本（`new-lab.ps1`） |
