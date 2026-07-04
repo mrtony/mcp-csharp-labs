@@ -72,11 +72,35 @@ dotnet add src/ChNN.主題 package ModelContextProtocol.AspNetCore --prerelease
 
 </details>
 
-## 目錄說明
+## 資料夾結構
 
-| 目錄 | 用途 |
-| --- | --- |
-| `src/` | 各練習專案（`ChNN.主題`） |
-| `tests/` | 測試專案（有目標可測時才建，見 [`tests/README.md`](tests/README.md)） |
-| `docs/notes/` | 跨練習的課程筆記；`docs/diagrams/` 放圖表 |
-| `scripts/` | 自動化腳本（`new-lab.ps1`） |
+```
+mcp-csharp-labs/
+├── .editorconfig                    # 統一 code style
+├── .gitattributes                   # 換行/文字檔正規化
+├── .gitignore                       # dotnet 範本
+├── global.json                      # 釘住 SDK 9.0.x
+├── Directory.Build.props            # 統一 TFM / Nullable / ImplicitUsings（各專案繼承）
+├── Directory.Packages.props         # 集中式套件版本管理（CPM）
+├── McpCsharpLabs.sln
+├── README.md
+│
+├── src/                             # 各練習專案（ChNN.主題）
+│   └── Ch01.GettingStarted.Stdio/   # 最小 MCP server + Echo tool（stdio）
+│       ├── Ch01.GettingStarted.Stdio.csproj
+│       ├── Program.cs
+│       └── README.md                # 本練習目標 / 做法 / 測試 / 踩雷筆記
+│
+├── tests/                           # 測試專案（有目標可測時才建）
+│   └── README.md
+│
+├── docs/
+│   ├── notes/                       # 跨練習的課程筆記（markdown）
+│   │   └── 00-index.md
+│   └── diagrams/                    # 架構圖 / 流程圖
+│
+└── scripts/
+    └── new-lab.ps1                  # 一鍵新增練習專案
+```
+
+> 灰底規則：跨練習的觀念放 `docs/notes/`，單一練習的細節放各專案自己的 `README.md`。
