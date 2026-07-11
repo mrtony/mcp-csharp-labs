@@ -4,6 +4,7 @@
 
 | 主題 | 筆記 |
 | --- | --- |
+| Ch01 — 測試 STDIO MCP Server（Postman + MCP Inspector） | [ch01-testing-mcp.md](ch01-testing-mcp.md) |
 | （範例）MCP 三大能力：Tools / Resources / Prompts | _待補_ |
 | （範例）stdio vs Streamable HTTP transport 差異 | _待補_ |
 
