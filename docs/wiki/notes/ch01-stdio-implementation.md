@@ -37,7 +37,7 @@ src/Ch01.GettingStarted.Stdio/
 | 套件 | 版本 |
 | --- | --- |
 | `Microsoft.Extensions.Hosting` | 10.0.9 |
-| `ModelContextProtocol` | 2.0.0-preview.1（目前 SDK 還在 preview） |
+| `ModelContextProtocol` | 0.3.0-preview.4（目前 SDK 還在 preview） |
 
 ---
 

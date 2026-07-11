@@ -4,7 +4,7 @@
 
 ## Tech Stack
 
-asp.net core 9, Aspire, Docker, ModelContextProtocol, ModelContextProtocol.AspNetCore
+asp.net core 9, Aspire, Docker, ModelContextProtocol, ModelContextProtocol.AspNetCore 0.3.0-preview.4
 
 ## 專案慣例
 
