@@ -2,6 +2,28 @@
 
 用 C# 建立 MCP (Model Context Protocol) server 的課程練習與筆記。單一 repo + 單一 solution，每個課程模組對應一個獨立練習專案。
 
+## 以AI建立此專案的方式
+
+[C# MCP server 學習專案結構規劃](https://claude.ai/chat/55c3b4ee-4374-4428-8193-4b6a37ba8350)
+
+向AI提出:
+```text
+我正在學習一門使用 C# 建立 MCP server的課程.
+過程中會有很多練習, 我希望建立一個 github repo來記錄, 提供我建立這個 repo 的規劃: sln, folder structure, project layout
+```
+
+過程中AI提問課程選型, 我選了:
+```text
+推薦 ChNN.主題（例如 Ch01.GettingStarted、Ch02.ApiServer）
+```
+
+AI依據上述建立專案後, 有些目錄沒有建立, 我再提出:
+```text
+你怎麼沒有建立 tests/, docs/, scripts/ , 這些目錄?
+```
+
+最後它就補全了。
+
 ## 環境需求
 
 - .NET SDK 9.0.x（見 [`global.json`](global.json)）
