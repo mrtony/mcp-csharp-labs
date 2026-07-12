@@ -7,6 +7,8 @@
 | Ch01 — STDIO MCP Server 的程式實作筆記 | [ch01-stdio-implementation.md](ch01-stdio-implementation.md) |
 | Ch01 — 測試 STDIO MCP Server（Postman + MCP Inspector） | [ch01-testing-mcp.md](ch01-testing-mcp.md) |
 | Ch01 — Streamable HTTP MCP Server 實作（ASP.NET Core + Aspire） | [ch01-http-implementation.md](ch01-http-implementation.md) |
+| Ch02 — 為 CarvedRock 建 API MCP Server 的程式實作 | [ch02-carvedrock-mcp-implementation.md](ch02-carvedrock-mcp-implementation.md) |
+| Ch02 — Tool 設計與可觀測性（tool 該放什麼邏輯 / logging / tracing） | [ch02-tool-design-notes.md](ch02-tool-design-notes.md) |
 | （範例）MCP 三大能力：Tools / Resources / Prompts | _待補_ |
 | （範例）stdio vs Streamable HTTP transport 差異 | _待補_ |
 
