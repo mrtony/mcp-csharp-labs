@@ -4,24 +4,61 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- 版本由 `dotnet add package` 於建立當下自動寫入（見 README 的建立流程）。 -->
+    <!-- 共用套件的版本衝突一律以 Ch02 (CarvedRock) 為準。 -->
   </ItemGroup>
+
+  <!-- Ch01.GettingStarted (Stdio / Http) 專用 -->
   <ItemGroup>
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
     <PackageVersion Include="ModelContextProtocol" Version="0.3.0-preview.4" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
   </ItemGroup>
 
-  <!-- Ch01.GettingStarted.Http (Aspire) -->
+  <!-- Ch01 / Ch02 共用（取 Ch02 版本） -->
   <ItemGroup>
-    <PackageVersion Include="Aspire.Hosting.AppHost" Version="9.3.1" />
-    <PackageVersion Include="CommunityToolkit.Aspire.Hosting.McpInspector" Version="9.8.0-beta.389" />
-    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
-    <PackageVersion Include="ModelContextProtocol.AspNetCore" Version="0.3.0-preview.4" />
-    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="9.4.0" />
-    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="9.3.1" />
-    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.12.0" />
-    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.12.0" />
+    <PackageVersion Include="Aspire.Hosting.AppHost" Version="9.5.1" />
+    <PackageVersion Include="CommunityToolkit.Aspire.Hosting.McpInspector" Version="9.8.0" />
+    <PackageVersion Include="ModelContextProtocol.AspNetCore" Version="0.4.0-preview.2" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="9.9.0" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="9.5.1" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.13.1" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.13.1" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.12.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.12.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.12.0" />
+  </ItemGroup>
+
+  <!-- Ch02.CreatingMcpServerForApi (CarvedRock) -->
+  <ItemGroup>
+    <PackageVersion Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.5.1" />
+    <PackageVersion Include="Aspire.Hosting.PostgreSQL" Version="9.5.1" />
+    <PackageVersion Include="AutoMapper" Version="13.0.1" />
+    <PackageVersion Include="CommunityToolkit.Aspire.Hosting.MailPit" Version="9.8.0" />
+    <PackageVersion Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
+    <PackageVersion Include="IdentityModel" Version="7.0.0" />
+    <PackageVersion Include="MailKit" Version="4.14.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="8.0.6" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.9" />
+    <PackageVersion Include="Microsoft.Extensions.Resilience" Version="9.9.0" />
+    <PackageVersion Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.EntityFrameworkCore" Version="1.0.0-beta.7" />
+    <PackageVersion Include="Riok.Mapperly" Version="4.2.1" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.Annotations" Version="9.0.6" />
+  </ItemGroup>
+
+  <!-- Ch02 測試 -->
+  <ItemGroup>
+    <PackageVersion Include="Aspire.Hosting.Testing" Version="9.5.1" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.0" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+    <PackageVersion Include="xunit.v3" Version="3.1.0" />
   </ItemGroup>
 </Project>
